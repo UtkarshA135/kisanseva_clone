@@ -76,24 +76,24 @@ class DescPage extends StatelessWidget {
                     SizedBox(
                       width: 10,
                     ),
-                    RaisedButton(
-                      onPressed: () {},
-                      shape: StadiumBorder(),
-                      child: Center(
-                        child: Row(
-                          children: [
-                            Icon(Icons.check),
-                            SizedBox(
-                              width: 5,
-                            ),
-                            Text(
-                              "Book",
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
+                    // RaisedButton(
+                    //   onPressed: () {},
+                    //   shape: StadiumBorder(),
+                    //   child: Center(
+                    //     child: Row(
+                    //       children: [
+                    //         Icon(Icons.check),
+                    //         SizedBox(
+                    //           width: 5,
+                    //         ),
+                    //         Text(
+                    //           "Book",
+                    //           style: TextStyle(fontWeight: FontWeight.bold),
+                    //         ),
+                    //       ],
+                    //     ),
+                    //   ),
+                    // ),
                   ],
                 ),
               ),

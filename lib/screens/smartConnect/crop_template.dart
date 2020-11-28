@@ -58,7 +58,7 @@ class CropTemplate extends StatelessWidget {
                         // height: 50,
                         // width: 120,
                         child: Text(
-                          "Crop Name : ${cropModel.cropDescription}",
+                          "Crop Name : ${cropModel.cropName}",
                           style: TextStyle(
                               fontSize: 16, fontWeight: FontWeight.bold),
                         ),
@@ -112,10 +112,12 @@ class CropTemplate extends StatelessWidget {
                             context,
                             MaterialPageRoute(
                                 builder: (context) => BidPage(
-                                      cropModel.cropImage,
-                                      cropModel.msp,
-                                      cropModel.cropName,
-                                      cropModel.cropDescription,
+                                      cropModel?.cropImage,
+                                      cropModel?.msp,
+                                      cropModel?.cropName,
+                                      cropModel?.cropDescription,
+                                      cropModel?.cropQuantity,
+                                      cropModel?.ownerContactInfo
                                     )),
                           );
                         },

@@ -4,9 +4,9 @@ import 'package:kisanseva/screens/smartConnect/display_crop_ctrl.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class BidPage extends StatefulWidget {
-  final String imgUrl, MSP, desc, cropName;
+  final String imgUrl, MSP, cropDescription, cropName,cropQuantity,ownerContactInfo;
 
-  const BidPage(this.imgUrl, this.MSP, this.desc, this.cropName);
+  const BidPage(this.imgUrl, this.MSP, this.cropName, this.cropDescription,this.cropQuantity,this.ownerContactInfo);
 
   @override
   _BidPageState createState() => _BidPageState();
@@ -62,19 +62,20 @@ class _BidPageState extends State<BidPage> {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10.0),
               child: Text(
-                "Crop name ",
+                "Crop name : ${widget.cropName}",
+                // "Crop name : ${displayCropController?.cropModel?.cropName}",
               ),
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10.0),
               child: Text(
-                "Quantity ",
+                "Quantity: ${widget.cropQuantity}",
               ),
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10.0),
               child: Text(
-                "Description",
+                "Description : ${widget.cropDescription}",
               ),
             ),
             // Padding(
@@ -140,7 +141,7 @@ class _BidPageState extends State<BidPage> {
               padding: const EdgeInsets.all(8.0),
               child: RaisedButton(
                 onPressed: () {
-                  call(displayCropController.cropModel.ownerContactInfo);
+                  call(widget.ownerContactInfo);
                 },
                 elevation: 4,
                 color: Colors.green[400],
